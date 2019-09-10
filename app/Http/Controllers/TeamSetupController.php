@@ -33,9 +33,9 @@ class TeamSetupController extends Controller
     public function create()
     {
          // create team name
-         $data = [];
-       // $data['teamSetup'] = TeamSetup::all();
 
+        $data = [];
+       // $data['teamSetups'] = TeamSetup::find($teamSetup);
         return view('backend.team-setup', $data);
 
     }
@@ -52,13 +52,16 @@ class TeamSetupController extends Controller
 
     }
 
-    public function show(TeamSetup $teamSetup)
+    public function show($teamSetupid)
     {
-
+       // die(var_dump($teamSetupid));
+       // dd($teamSetups);
         $data = [];
-        $data['teamSetup'] = TeamSetup::all();
+        $data['teamSetups'] = TeamSetup::find($teamSetupid);
+       // $data['teamSetup'] = TeamSetup::all();
 
-        return view('/team-setup', $data);
+
+        return view('backend.team-setup', $data);
     }
 
 

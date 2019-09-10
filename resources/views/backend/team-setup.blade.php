@@ -114,8 +114,9 @@
 
                 <div class="col-lg-12 text-center pb-3">
                     <h4 class="text-capitalize  py-2 bg-info">Team Table</h4>
-                   @foreach ($teamsetups as $teametup)
-                   <table class="table">
+
+                  @foreach ($team_Setups as $team_Setup)
+                  <table class="table">
                         <thead>
                           <tr>
                             <th scope="col">Team Name</th>
@@ -124,12 +125,13 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>{{ $teamsetup->team_name }}</td>
+                            <td>{{ $team_Setup->team_name }}</td>
                             <td>@mdo</td>
                           </tr>
                         </tbody>
                 </table>
-                   @endforeach
+                  @endforeach
+
                 </div>
         </div>
     </div>
