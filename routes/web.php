@@ -25,3 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 // team-setup controller
 
 Route::get('/team-setup', 'TeamSetupController@index');
+Route::post('/create-team','TeamSetupController@store');
+
+Route::get('/team-show', 'TeamSetupController@show');

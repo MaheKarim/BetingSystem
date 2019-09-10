@@ -94,48 +94,50 @@
         <div class="row">
             <div class="col-lg-12 text-center pb-3">
                 <h4 class="text-capitalize  py-2 bg-primary">Team Setup</h4>
+                  <!-- Notification Start -->
+                                @if (session()->has('success'))
+                                   <div class="alert alert-success">
+                                       {{ session()->get('success') }}
+                                   </div>
+                                @endif
+                  <!-- Notification End -->
+
             </div>
             <div class="col-lg-6 mx-auto">
-                <form action="">
+                <form method="POST" action="{{ url('create-team') }}">
+                    @csrf
                     <span>Select Team Name <span class="text-red">*</span></span>
-                    <input type="text" class="form-control my-2" placeholder="Team Name">
-                    <button type="submit" class="form-control my-3">Create</button>
+                    <input type="text" class="form-control my-2" name="team_name" id="team_name" placeholder="Team Name">
+                    <button type="submit" class="form-control my-3">Create Team</button>
                 </form>
             </div>
+
+                <div class="col-lg-12 text-center pb-3">
+                    <h4 class="text-capitalize  py-2 bg-info">Team Table</h4>
+                   @foreach ($teamsetups as $teametup)
+                   <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Team Name</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{ $teamsetup->team_name }}</td>
+                            <td>@mdo</td>
+                          </tr>
+                        </tbody>
+                </table>
+                   @endforeach
+                </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="pt-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 align-self-center">
-                <p>© 2019 Copyright: <a href="index.html"> Cricbuzar.com</a></p>
-            </div>
-            <div class="col-lg-6 text-lg-right text-center">
-                <ul class="list-inline social-icon">
-                    <li>
-                        <a href=""> <i class="fa fa-facebook"></i> </a>
-                        <a href=""> <i class="fa fa-twitter"></i> </a>
-                        <a href=""> <i class="fa fa-google-plus"></i> </a>
-                    </li>
-                </ul>
-            </div>
 
-        </div>
-    </div>
-</footer>
-
-<!-- Footer -->
-<!-- jQuery -->
-<script src="{{ asset('/') }}plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="{{ asset('/') }}plugins/bootstrap/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<!-- Main Script -->
-<script src="{{ asset('/') }}js/script.js"></script>
-
+@include('backend.footer')
 
 </body>
 </html>

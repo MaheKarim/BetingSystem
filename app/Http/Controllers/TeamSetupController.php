@@ -32,60 +32,48 @@ class TeamSetupController extends Controller
      */
     public function create()
     {
-        //
+         // create team name
+         $data = [];
+       // $data['teamSetup'] = TeamSetup::all();
+
+        return view('backend.team-setup', $data);
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $teamSetup = new TeamSetup();
+        $teamSetup->team_name = $request->team_name;
+        $teamSetup->save();
+
+        session()->flash('success', 'Team Create Successfully!');
+        return redirect('/team-setup');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\TeamSetup  $teamSetup
-     * @return \Illuminate\Http\Response
-     */
     public function show(TeamSetup $teamSetup)
     {
-        //
+
+        $data = [];
+        $data['teamSetup'] = TeamSetup::all();
+
+        return view('/team-setup', $data);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\TeamSetup  $teamSetup
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(TeamSetup $teamSetup)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TeamSetup  $teamSetup
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, TeamSetup $teamSetup)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\TeamSetup  $teamSetup
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(TeamSetup $teamSetup)
     {
         //
