@@ -11,16 +11,16 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- font-awesome -->
-  <link rel="stylesheet" href="plugins/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ asset('/') }}plugins/font-awesome/font-awesome.min.css">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset('/') }}plugins/bootstrap/bootstrap.min.css">
 
   <!-- Main Stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{ asset('/') }}css/style.css" rel="stylesheet">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ asset('/') }}images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ asset('/') }}images/favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -126,17 +126,16 @@
         </div>
     </div>
 </footer>
+
 <!-- Footer -->
 <!-- jQuery -->
-<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="{{ asset('/') }}plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap JS -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-
+<script src="{{ asset('/') }}plugins/bootstrap/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-
 <!-- Main Script -->
-<script src="js/script.js"></script>
+<script src="{{ asset('/') }}js/script.js"></script>
+
 
 </body>
 </html>

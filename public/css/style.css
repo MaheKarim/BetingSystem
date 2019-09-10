@@ -1,0 +1,172 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+
+PROJECT:	Project Name
+VERSION:	Versoin Number
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+.btn {
+  font-size: 14px !important;
+  border: none !important;
+}
+
+.btn:hover {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 0, 0.5) !important;
+  color: #007bff;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+.py-25 {
+  padding: 25px 0;
+}
+
+.px-25 {
+  padding: 0 25px;
+}
+
+.py-50 {
+  padding: 50px 0;
+}
+
+.px-50 {
+  padding: 0 50px;
+}
+
+.py-75 {
+  padding: 75px 0;
+}
+
+.px-75 {
+  padding: 0 75px;
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+
+.px-100 {
+  padding: 0 100px;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.text-secondary {
+  color: red !important;
+}
+
+.text-secondary:hover {
+  color: limegreen !important;
+}
+
+.text-green {
+  color: limegreen;
+}
+
+.text-red {
+  color: red;
+}
+
+.bg-primary {
+  background: rgba(255, 255, 0, 0.5) !important;
+}
+
+.transition {
+  transition: ease 0.3s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.navbar-brand img {
+  width: 120px;
+}
+
+footer {
+  background: rgba(255, 159, 64, 0.2);
+}
+
+.run-feed-popup {
+  position: relative;
+  background: #ececec;
+}
+
+.run-feed-popup:after {
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  width: 45px;
+  height: 45px;
+  background: #ececec;
+}
+
+.bid-select ul li {
+  margin-right: 0 !important;
+}
+
+.bid-select ul li a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background: #0062cc;
+  text-align: center;
+  margin: 2.5px 0;
+  line-height: 45px;
+  color: #fff;
+}
+
+.bid-select ul li a:hover {
+  background: #0b54a3;
+}
+
+.pass {
+  width: 95px !important;
+  background: #1d3a58 !important;
+}
+
+.bid-select-active {
+  background: #0063cc81 !important;
+}
+
+.bg-active {
+  background: #fff;
+}
+
+.deposit-form-control {
+  background: #dcdcdc !important;
+}
+
+.social-icon li a {
+  background: #000;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #0062cc;
+}
+
+/*# sourceMappingURL=maps/style.css.map */
