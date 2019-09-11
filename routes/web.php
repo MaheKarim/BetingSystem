@@ -31,5 +31,5 @@ Route::get('/team-setup-main/delete/{id}','TeamSetupController@deletekor')->name
 
 // match-setup controller
 
-Route::get('/match-setup', 'MatchsetupController@index')->name('matchsetupindex');
+Route::get('/match-format-setup', 'MatchsetupController@index')->name('matchsetupindex');
 
