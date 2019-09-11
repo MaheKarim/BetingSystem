@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Cricbuzar</title>
+  <title>
+      @yield('title')
+  </title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,22 +41,23 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto main-nav ">
                                     <li class="nav-item">
+                                            <a class="nav-link active text-primary font-weight-bold text-capitalize"
+                                                href="{{ route('home') }}">Home</a>
+                                        </li>
+                                <li class="nav-item">
                                             <div class="btn-group">
                                                 <a class="nav-link text-primary font-weight-bold text-capitalize dropdown-toggle"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                                     href="">Menu</a>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="team-setup.html">Team Setup</a>
+                                                    <a class="dropdown-item" href="{{ route('teamindexpage') }}">Team Setup</a>
                                                     <a class="dropdown-item" href="match-format-setup.html">Match Format Setup</a>
                                                     <a class="dropdown-item" href="match-setup.html">Match Setup</a>
                                                     <a class="dropdown-item" href="run-to-run-setup.html">Run To Run Setup</a>
                                                 </div>
                                             </div>
                                         </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active text-primary font-weight-bold text-capitalize"
-                                        href="index.html">Home</a>
-                                </li>
+
                                 <li class="nav-item">
                                     <div class="btn-group">
                                         <a class="nav-link text-primary font-weight-bold text-capitalize dropdown-toggle"
@@ -89,17 +92,19 @@
         </div>
     </section>
 
+
+
 <section class="py-50">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-
+                  @yield('maincontent')
             </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
- @include('footer')
+ @include('backend.footer')
 </body>
 </html>
