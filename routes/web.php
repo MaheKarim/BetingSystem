@@ -25,17 +25,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 // team-setup controller
 
 Route::get('/team-setup-main', 'TeamSetupController@index')->name('teamindexpage');
-
 Route::post('/create-team','TeamSetupController@store');
-
 Route::get('/team-setup/{TeamSetup}', 'TeamSetupController@show');
-
-
-
 Route::get('/team-setup-main/delete/{id}','TeamSetupController@deletekor')->name('delete_team');
 
+// match-setup controller
 
+Route::get('/match-setup', 'MatchsetupController@index')->name('matchsetupindex');
 
-
-
-//Route::delete('teamdelete/{id}','TeamSetupController@delete')->name('delete');
