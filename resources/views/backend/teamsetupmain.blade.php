@@ -115,22 +115,24 @@
                 <div class="col-lg-12 text-center pb-3">
                     <h4 class="text-capitalize  py-2 bg-info">Team Table</h4>
 
-                  @foreach ($team_Setups as $team_Setup)
-                  <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Team Name</th>
-                            <th scope="col">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>{{ $team_Setup->team_name }}</td>
-                            <td>@mdo</td>
-                          </tr>
-                        </tbody>
-                </table>
-                  @endforeach
+
+                    <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Team Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            @foreach ($teamSetups as $teamsetup)
+                            <tbody>
+                            <tr>
+                                <td>{{ $teamsetup->team_name }}</td>
+                                <td>  <a href="{{ route('delete_team', $teamsetup->id) }}" type="button" class="btn btn-danger btn-sm  mr-2">Delete</a ></td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                    </table>
+
 
                 </div>
         </div>

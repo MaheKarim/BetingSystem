@@ -21,23 +21,21 @@ class TeamSetupController extends Controller
     }
     public function index()
     {
-        //
-        return view('backend.team-setup');
+        $data = [];
+        $data['teamSetups'] = TeamSetup::all();
+
+       // $data['teamSetups'] = TeamSetup::find($TeamSetupId);
+
+        return view('/backend.teamsetupmain', $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
          // create team name
-
         $data = [];
        // $data['teamSetups'] = TeamSetup::find($teamSetup);
-        return view('backend.team-setup', $data);
-
+        return view('/backend.teamsetupmain', $data);
     }
 
 
@@ -48,20 +46,21 @@ class TeamSetupController extends Controller
         $teamSetup->save();
 
         session()->flash('success', 'Team Create Successfully!');
-        return redirect('/team-setup');
+
+        return redirect('/team-setup-main');
 
     }
 
-    public function show($teamSetupid)
+    public function show($id)
     {
        // die(var_dump($teamSetupid));
        // dd($teamSetups);
-        $data = [];
-        $data['teamSetups'] = TeamSetup::find($teamSetupid);
-       // $data['teamSetup'] = TeamSetup::all();
+        //$teamsetups = TeamSetup::find($id);
+        // $data['teamSetup'] = TeamSetup::all();
 
+        $teamSetups = TeamSetup::all();
 
-        return view('backend.team-setup', $data);
+        return view('/backend.teamsetupmain', compact('teamSetups'));
     }
 
 
@@ -77,8 +76,14 @@ class TeamSetupController extends Controller
     }
 
 
-    public function destroy(TeamSetup $teamSetup)
+    public function deletekor($id)
     {
-        //
+
+        TeamSetup::find($id)->delete();
+         //return $id;
+         session()->flash('success', 'Team Delete Successfully!');
+
+        return redirect(route('teamindexpage'));
+
     }
 }
