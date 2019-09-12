@@ -77,12 +77,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-primary font-weight-bold text-capitalize"
-                                        href="{{ route('contactFrontEnd') }}">Contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-primary font-weight-bold text-capitalize"
                                         href="admin-notification.html">Notification<sup style="color: red">1</sup></a>
                                 </li>
+                                <li class="nav-item">
+                                        <a class="nav-link text-primary font-weight-bold text-capitalize"
+                                            href="{{ route('contactbackend') }}">Contact</a>
+                                    </li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a class="nav-link active text-primary font-weight-bold text-capitalize"

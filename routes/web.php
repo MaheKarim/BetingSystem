@@ -12,12 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('welcome');  });
 
 
-Auth::routes();
-//['verify' => true]
+Auth::routes();   //['verify' => true]
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -38,6 +36,8 @@ Route::get('/match-format-show/{Matchsetup}','MatchsetupController@show');
 Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('delete_match_format');
 
 
-// contact page
+// contact page for front-end
 
 Route::get('/contact-us', 'ContactController@index')->name('contactFrontEnd');
+
+Route::get('/see-contact', 'ContactController@contactlist')->name('contactbackend');
