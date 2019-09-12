@@ -32,4 +32,6 @@ Route::get('/team-setup-main/delete/{id}','TeamSetupController@deletekor')->name
 // match-setup controller
 
 Route::get('/match-format-setup', 'MatchsetupController@index')->name('matchsetupindex');
-
+Route::post('/create-matchFormat','MatchsetupController@store');
+Route::get('/match-format-show/{Matchsetup}','MatchsetupController@show');
+Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('delete_match_format');
