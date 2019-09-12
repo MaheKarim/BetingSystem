@@ -11,8 +11,8 @@
     <div class="col-lg-6 mx-auto">
         <form action="">
             <span>Select Format Name <span class="text-red">*</span></span>
-            <input type="text" class="form-control my-2" placeholder="Format Type">
-            <input type="text" class="form-control my-2" placeholder="Over">
+            <input type="text" class="form-control my-2" name="format_type" id="format_type" placeholder="Format Type">
+            <input type="text" class="form-control my-2" name="over" id="over" placeholder="Over">
             <button type="submit" class="form-control my-3">Create</button>
         </form>
     </div>

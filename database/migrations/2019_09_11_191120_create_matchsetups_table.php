@@ -15,6 +15,8 @@ class CreateMatchsetupsTable extends Migration
     {
         Schema::create('matchsetups', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('format_type');
+            $table->integer('over');
             $table->timestamps();
         });
     }
