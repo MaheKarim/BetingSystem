@@ -29,9 +29,15 @@ Route::post('/create-team','TeamSetupController@store');
 Route::get('/team-setup/{TeamSetup}', 'TeamSetupController@show');
 Route::get('/team-setup-main/delete/{id}','TeamSetupController@deletekor')->name('delete_team');
 
+
 // match-setup controller
 
 Route::get('/match-format-setup', 'MatchsetupController@index')->name('matchsetupindex');
 Route::post('/create-matchFormat','MatchsetupController@store');
 Route::get('/match-format-show/{Matchsetup}','MatchsetupController@show');
 Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('delete_match_format');
+
+
+// contact page
+
+Route::get('/contact-us', 'ContactController@index')->name('contactFrontEnd');
