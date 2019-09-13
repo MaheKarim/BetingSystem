@@ -39,5 +39,8 @@ Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('dele
 // contact page for front-end
 
 Route::get('/contact-us', 'ContactController@index')->name('contactFrontEnd');
+Route::post('/contact-message', 'ContactController@store')->name('contactmessageform');
+// Got Error Here
+Route::get('/see-contact', 'ContactController@contactlist')->name('contactbackend'); //admin see pnly
 
-Route::get('/see-contact', 'ContactController@contactlist')->name('contactbackend');
+

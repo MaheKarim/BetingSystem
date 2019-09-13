@@ -11,11 +11,11 @@
                     <h2>Contact Us</h2>
                 </div>
                 <div class="col-lg-6 mt-5 mx-auto shadow p-3">
-                    <form action="">
-                        <input type="text" class="form-control my-3" placeholder="Username">
-                        <input type="email" class="form-control my-3" placeholder="Email">
-                        <input type="number" class="form-control my-3" placeholder="Phone Number">
-                        <textarea name="message" id="" cols="30" rows="10" class="form-control my-3" placeholder="Message"></textarea>
+                    <form action="{{ route('contact-message') }}" method="POST">
+                        <input type="text" class="form-control my-3" name="username" placeholder="Username">
+                        <input type="email" class="form-control my-3" name="mail" placeholder="Email">
+                        <input type="number" class="form-control my-3" name="phn_number"  placeholder="Phone Number">
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-control my-3" placeholder="Message"></textarea>
                         <button type="submit" class="form-control btn btn-primary my-3">Submit</button>
                     </form>
                 </div>
