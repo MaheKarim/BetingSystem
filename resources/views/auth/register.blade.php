@@ -56,13 +56,13 @@
                             <label for="user_role" class="col-md-4 col-form-label text-md-right">{{ __('Select A Role') }}</label>
 
                             <div class="col-md-6">
-                                @foreach ($userroles as $userrole)
+                              //  @foreach ($userroles as $userrole)
                                 <select class="form-control" name="user_role">
                                         <option disabled selected>Select a role</option>
                                         <option value="1">Agent</option>
                                         <option value="2">General User</option>
                                     </select>
-                                @endforeach
+                            //    @endforeach
                                 @error('user_role')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
