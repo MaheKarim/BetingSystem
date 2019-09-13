@@ -11,7 +11,8 @@
                     <h2>Contact Us</h2>
                 </div>
                 <div class="col-lg-6 mt-5 mx-auto shadow p-3">
-                    <form action="{{ route('contact-message') }}" method="POST">
+                    <form action="{{ url('contact-message') }}" method="POST">
+                        @csrf
                         <input type="text" class="form-control my-3" name="username" placeholder="Username">
                         <input type="email" class="form-control my-3" name="mail" placeholder="Email">
                         <input type="number" class="form-control my-3" name="phn_number"  placeholder="Phone Number">
@@ -23,10 +24,6 @@
         </div>
     </section>
 @endsection
-
-
-
-
 <!-- Footer -->
 
 </body>

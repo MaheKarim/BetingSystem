@@ -19,7 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('mail')->nullable();
             $table->integer('phn_number');
             $table->longText('message');
-            $table->boolean('status')->nullable();
+           // $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }
