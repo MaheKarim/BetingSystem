@@ -43,4 +43,5 @@ Route::post('/contact-message', 'ContactController@store')->name('contactmessage
 // Got Error Here
 Route::get('/see-contact', 'ContactController@contactlist')->name('contactbackend'); //admin see only
 Route::get('/seecontact/{Contact}', 'ContactController@show')->name('showmessage');
+Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->name('delete_contact');
 

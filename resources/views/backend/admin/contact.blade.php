@@ -22,7 +22,7 @@
                   <td>{{ $contact->mail }}</td>
                   <td>{{ $contact->phn_number }}</td>
                   <td>{{ $contact->message }}</td>
-                  <td>Delete</td>
+                  <td><a href="{{ route('delete_contact', $contact->id) }}" class="btn btn-warning" type="button">Delete</a></td>
                 </tr>
               </tbody>
         @endforeach

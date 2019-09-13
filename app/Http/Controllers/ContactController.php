@@ -39,4 +39,12 @@ class ContactController extends Controller
 
         return redirect(route('contactbackend'), $data);
     }
+
+    public function deleteContact($id){
+
+        Contact::find($id)->delete();
+        return redirect(route('contactbackend'));
+
+
+    }
 }
