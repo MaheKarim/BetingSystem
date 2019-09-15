@@ -46,3 +46,5 @@ Route::get('/see-contact', 'ContactController@contactlist')->name('contactbacken
 Route::get('/seecontact/{Contact}', 'ContactController@show')->name('showmessage');
 Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->name('delete_contact');
 
+// run feed
+
