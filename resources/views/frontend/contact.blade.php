@@ -6,10 +6,19 @@
 @section('frontEndContent')
 <section class="py-50">
         <div class="container">
+                <!-- Notification Start -->
+                @if (session()->has('success'))
+                <div class="alert alert-success">
+                {{ session()->get('success') }}
+                </div>
+                @endif
+                <!-- Notification End -->
             <div class="row">
                 <div class="col-lg-12 bg-primary text-center">
                     <h2>Contact Us</h2>
+
                 </div>
+
                 <div class="col-lg-6 mt-5 mx-auto shadow p-3">
                     <form action="{{ url('contact-message') }}" method="POST">
                         @csrf

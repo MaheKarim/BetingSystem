@@ -19,7 +19,7 @@ class ContactController extends Controller
     }
 
     public function store(Request $request){
-        // return $request->all();
+
        $contacts = new Contact();
        $contacts->username = $request->username;
        $contacts->mail     = $request->mail;
@@ -43,8 +43,7 @@ class ContactController extends Controller
     public function deleteContact($id){
 
         Contact::find($id)->delete();
+        session()->flash('success', 'Contact Message Delete Successfully!');
         return redirect(route('contactbackend'));
-
-
     }
 }

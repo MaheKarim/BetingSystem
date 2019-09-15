@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');  });
 
 
-Auth::routes(['verify' => true]);   //
+Auth::routes();   //['verify' => true]
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -32,7 +32,7 @@ Route::get('/team-setup-main/delete/{id}','TeamSetupController@deletekor')->name
 
 Route::get('/match-format-setup', 'MatchsetupController@index')->name('matchsetupindex');
 Route::post('/create-matchFormat','MatchsetupController@store');
-Route::get('/match-format-show/{Matchsetup}','MatchsetupController@show');
+Route::get('/match-format-show/{id}','MatchsetupController@show');
 Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('delete_match_format');
 
 
@@ -40,6 +40,7 @@ Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('dele
 
 Route::get('/contact-us', 'ContactController@index')->name('contactFrontEnd');
 Route::post('/contact-message', 'ContactController@store')->name('contactmessageform');
+
 // Got Error Here
 Route::get('/see-contact', 'ContactController@contactlist')->name('contactbackend'); //admin see only
 Route::get('/seecontact/{Contact}', 'ContactController@show')->name('showmessage');

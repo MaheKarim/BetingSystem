@@ -5,6 +5,13 @@
 @endsection
 
 @section('maincontent')
+                        <!-- Notification Start -->
+                                    @if (session()->has('success'))
+                                       <div class="alert alert-success">
+                                           {{ session()->get('success') }}
+                                       </div>
+                                    @endif
+                        <!-- Notification End -->
 <table class="table">
         <thead>
           <tr>
