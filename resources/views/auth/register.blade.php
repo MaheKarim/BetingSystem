@@ -58,6 +58,7 @@
                             <div class="col-md-6">
                                 <select class="form-control" name="user_role">
                                     <option disabled selected>Select a role</option>
+                                    @php( $user_role = \App\UserRole::all())
                                     @foreach($user_role as $role)
                                         <option value="{{ $role->id }}">{{ $role->user_role }}</option>
                                     @endforeach
