@@ -73,13 +73,13 @@
                                         </div>
                                     </li>
                                     <li class="my-2">
-                                        <input type="date" class="form-control" name="local_time">
+                                        <input type="date" class="form-control" name="begin">
+                                    </li>
+                                    <li class="my-2">
+                                        <input type="time" class="form-control" name="local_time">
                                     </li>
                                     <li class="my-2">
                                         <input type="time" class="form-control" name="gmt_time">
-                                    </li>
-                                    <li class="my-2">
-                                        <input type="time" class="form-control">
                                     </li>
                                     <li class="my-2">
                                         <select name="match_type" id="" class="form-control w-25">

@@ -13,6 +13,7 @@ class CreateFullMatchSetupsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('team_1');
             $table->integer('team_2');
+            $table->timestamp("begin");
             $table->string('local_time')->nullable();
             $table->string('gmt_time')->nullable();
             $table->integer('match_type')->nullable();
