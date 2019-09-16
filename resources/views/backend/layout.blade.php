@@ -53,6 +53,7 @@
                                                     <a class="dropdown-item" href="{{ route('teamindexpage') }}">Team Setup</a>
                                                     <a class="dropdown-item" href="{{ route('matchsetupindex') }}">Match Format Setup</a>
                                                     <a class="dropdown-item" href="{{ route('fullmatchsetup.create') }}">Match Setup</a>
+                                                    <a class="dropdown-item" href="{{ route('fullmatchsetup.index') }}">Running Match List</a>
                                                     <a class="dropdown-item" href="run-to-run-setup.html">Run To Run Setup</a>
                                                 </div>
                                             </div>

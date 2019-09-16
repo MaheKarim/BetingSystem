@@ -16,6 +16,10 @@ class FullMatchSetupController extends Controller
      */
     public function index()
     {
+     $data = [];
+     $data['fullmatchsetups'] = FullMatchSetup::all();
+
+     return view('backend.admin.seefullmatchlist', $data);
 
     }
 
@@ -35,12 +39,7 @@ class FullMatchSetupController extends Controller
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $fullmatchsetups = new FullMatchSetup();
@@ -57,7 +56,7 @@ class FullMatchSetupController extends Controller
 
         session()->get('success','Match Format Create Successfully!');
 
-        return redirect('');
+        return redirect()->route('fullmatchsetup.index');
 
     }
 
