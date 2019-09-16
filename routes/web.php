@@ -50,3 +50,5 @@ Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->na
 
 Route::resource('fullmatchsetup','FullMatchSetupController');
 
+// loout
+Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
