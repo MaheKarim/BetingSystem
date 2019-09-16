@@ -109,7 +109,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-3 align-self-center">
-                                                        <input type="checkbox" name="" id="">
+                                                        <input type="checkbox" name="bounce_team" id="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -123,7 +123,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-3 align-self-center">
-                                                        <input type="checkbox" name="" id="">
+                                                        <input type="checkbox" name="net_team" id="">
                                                     </div>
                                                 </div>
                                             </div>
