@@ -48,7 +48,7 @@ Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->na
 
 // full match setup
 
-Route::resource('fullmatchsetup','FullMatchSetupController');
+Route::resource('fullmatchsetup','FullMatchSetupController')->middleware('admin');
 
 // loout
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
