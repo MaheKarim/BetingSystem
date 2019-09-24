@@ -14,9 +14,10 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+
     public function handle($request, Closure $next)
     {
-        if(auth::user()->user_role != 2){
+        if(auth::user()->user_role != 1){
             return redirect('/');
         }
         return $next($request);

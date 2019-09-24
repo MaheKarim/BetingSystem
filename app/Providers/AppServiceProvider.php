@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Blade;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -27,6 +29,12 @@ class AppServiceProvider extends ServiceProvider
     {
         // 1071 error code
         Schema::defaultStringLength(191);
+
+        // custome direction
+        Blade::if('admin', function () {
+            return auth()->check() && auth()->user()->role_id == 1;
+        });
+    
 
     }
 }

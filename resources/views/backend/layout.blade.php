@@ -44,20 +44,22 @@
                                             <a class="nav-link active text-primary font-weight-bold text-capitalize"
                                                 href="{{ route('home') }}">Home</a>
                                         </li>
+                                @admin
                                 <li class="nav-item">
-                                            <div class="btn-group">
-                                                <a class="nav-link text-primary font-weight-bold text-capitalize dropdown-toggle"
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                                    href="">Menu</a>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="{{ route('teamindexpage') }}">Team Setup</a>
-                                                    <a class="dropdown-item" href="{{ route('matchsetupindex') }}">Match Format Setup</a>
-                                                    <a class="dropdown-item" href="{{ route('fullmatchsetup.create') }}">Match Setup</a>
-                                                    <a class="dropdown-item" href="{{ route('fullmatchsetup.index') }}">Running Match List</a>
-                                                    <a class="dropdown-item" href="run-to-run-setup.html">Run To Run Setup</a>
-                                                </div>
-                                            </div>
-                                        </li>
+                                    <div class="btn-group">
+                                        <a class="nav-link text-primary font-weight-bold text-capitalize dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            href="">Menu</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="{{ route('teamindexpage') }}">Team Setup</a>
+                                            <a class="dropdown-item" href="{{ route('matchsetupindex') }}">Match Format Setup</a>
+                                            <a class="dropdown-item" href="{{ route('fullmatchsetup.create') }}">Match Setup</a>
+                                            <a class="dropdown-item" href="{{ route('fullmatchsetup.index') }}">Running Match List</a>
+                                            <a class="dropdown-item" href="run-to-run-setup.html">Run To Run Setup</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                @endadmin
 
                                 <li class="nav-item">
                                     <div class="btn-group">
