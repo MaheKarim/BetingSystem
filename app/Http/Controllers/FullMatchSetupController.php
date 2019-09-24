@@ -43,6 +43,15 @@ class FullMatchSetupController extends Controller
     public function store(Request $request)
     {
         $fullmatchsetups = new FullMatchSetup();
+
+        if($request->check_1 && !$request->check_2){
+            $fullmatchsetups->bounce_team = $request->team_1;
+            $fullmatchsetups->net_team = $request->team_2;
+        }else if(!$request->check_1 && $request->check_2){
+            $fullmatchsetups->bounce_team = $request->team_2;
+            $fullmatchsetups->net_team = $request->team_1;
+        }
+        
         $fullmatchsetups->team_1 = $request->team_1;
         $fullmatchsetups->team_2 = $request->team_2;
         $fullmatchsetups->local_time = $request->local_time;

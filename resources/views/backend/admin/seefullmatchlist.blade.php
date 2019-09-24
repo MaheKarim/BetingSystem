@@ -17,18 +17,18 @@
     <div class="col-md-6 mb-md-0 p-md-4">
       <div class="w-100" alt="">
         <h5 class="mt-0 text-center">Today Team</h5>
-           <h3> {{ $fullmatchsetup->team_1 }} vs {{ $fullmatchsetup->team_2 }} </h3>
-           <p>Time:{{ $fullmatchsetup->begin }}</p>
-           <p>Match Type:{{ $fullmatchsetup->match_type }}</p>
-           <p>Extra Deduction: {{ $fullmatchsetup->extra_deduction }}</p>
+           <h3> {{ $fullmatchsetup->teamName->team_name }} vs {{ $fullmatchsetup->teamName2->team_name }} </h3>
+           <p>Time:  {{ $fullmatchsetup->begin }}</p>
+           <p>Match Type:  {{ $fullmatchsetup->matchFormat->format_type }}</p>
+           <p>Extra Deduction:  {{ $fullmatchsetup->extra_deduction }}</p>
 
       </div>
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0 text-center">Team Info</h5>
 
-      <p class="font-weight-bolder"> Bounce Team Money: {{ $fullmatchsetup->bounce_team }}</p>
-      <p class="font-weight-bolder"> Net Team Money: {{ $fullmatchsetup->net_team }}</p>
+      <p class="font-weight-bolder"> Bounce Team: {{ $fullmatchsetup->teamName->team_name }}</p>
+      <p class="font-weight-bolder"> Net Team: {{ $fullmatchsetup->teamName2->team_name }}</p>
       <a href="#" class="btn btn-primary btn-sm">Edit</a>
        |
       <a href="#" class="btn btn-danger btn-sm mr-0">Delete</a>

@@ -52,7 +52,7 @@
 
                                                     </div>
                                                     <div class="col-2 align-self-center">
-                                                        <input type="checkbox" name="" id="">
+                                                        <input type="checkbox" name="check_1">
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,7 +66,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-2 align-self-center">
-                                                        <input type="checkbox" name="" id="">
+                                                        <input type="checkbox" name="check_2">
                                                     </div>
                                                 </div>
                                             </div>
