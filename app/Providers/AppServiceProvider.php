@@ -35,6 +35,5 @@ class AppServiceProvider extends ServiceProvider
             return auth()->check() && auth()->user()->role_id == 1;
         });
     
-
     }
 }
