@@ -48,9 +48,7 @@ Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->na
 
 // full match setup
 
-// Route::group(['middleware' => ['AdminMiddleware']], function () {
-  
-// });
+
 Route::resource('fullmatchsetup','FullMatchSetupController')->middleware('admin');
 
 
