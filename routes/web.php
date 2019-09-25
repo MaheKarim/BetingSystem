@@ -13,15 +13,13 @@
 
 Route::get('/', function () {
     return view('welcome');  });
-
-
 Auth::routes(['verify' => true]);
-
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 // change password
 
-Route::get('/changePassword','HomeController@showChangePasswordForm');
+Route::get('/changePassword','HomeController@showChangePasswordForm')->name('passChange');
 Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 
 
@@ -58,7 +56,7 @@ Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->na
 Route::resource('fullmatchsetup','FullMatchSetupController')->middleware('admin');
 
 
-// loout
+// logout
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 // user profile settings

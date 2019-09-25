@@ -6,7 +6,20 @@
 
 @section('maincontent')
      <h1 align="center">Welcome TO Beting Site </h1>
-     Your Name:  {{ Auth::user()->name }}  <br>
-     Your mail: {{ Auth::user()->email }} <br>
-     You are : {{ Auth::user()->userType->user_role }}
+
+
+
+
+     <div class="card">
+        <div class="card-header">
+          Hola! <b> {{ Auth::user()->name }}  </b>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">You are our Great, {{ Auth::user()->userType->user_role }} </h5>
+          <p class="card-text">
+            Your mail: {{ Auth::user()->email }} <br>
+          </p>
+          <a href="{{ route('passChange') }}" class="btn btn-danger">Change Password</a>
+        </div>
+      </div>
 @endsection

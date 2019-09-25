@@ -88,14 +88,18 @@
                                             href="{{ route('contactbackend') }}">Contact</a>
                                     </li>
                             </ul>
-                            <ul class="nav navbar-nav navbar-right">
+
+                            {{-- Logout DropDown --}}
+
+                                <ul class="nav navbar-nav navbar-right">
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                             Logout
-                                        </a>
+                                    </a>
                                         <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                                            @csrf
                                         </form>
-                            </ul>
+                                </ul>
+
                         </div>
                     </nav>
                 </div>
