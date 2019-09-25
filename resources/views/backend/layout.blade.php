@@ -77,7 +77,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-primary font-weight-bold text-capitalize"
-                                        href="user-profile.html">User Profile</a>
+                                href="{{ route('userprofile') }}">User Profile</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-primary font-weight-bold text-capitalize"

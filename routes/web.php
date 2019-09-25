@@ -54,3 +54,8 @@ Route::resource('fullmatchsetup','FullMatchSetupController')->middleware('admin'
 
 // loout
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+// user profile settings
+
+Route::view('user-profile', 'backend.admin.user-profile')->name('userprofile');
+Route::get('/editprofile','UserController@edit')->name('userprofileyour');
