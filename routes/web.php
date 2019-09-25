@@ -19,6 +19,12 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// change password
+
+Route::get('/changePassword','HomeController@showChangePasswordForm');
+Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
+
+
 
 // team-setup controller
 
@@ -57,5 +63,5 @@ Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('
 
 // user profile settings
 
-Route::view('user-profile', 'backend.admin.user-profile')->name('userprofile');
-Route::get('/editprofile','UserController@edit')->name('userprofileyour');
+Route::get('user-profile', 'UserController@index')->name('userprofile');
+//Route::get('/editprofile','UserController@edit')->name('userprofileyour');

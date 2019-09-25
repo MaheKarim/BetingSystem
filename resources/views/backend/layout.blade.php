@@ -60,7 +60,7 @@
                                     </div>
                                 </li>
                                 @endadmin
-                              
+
 
                                 <li class="nav-item">
                                     <div class="btn-group">
@@ -96,7 +96,6 @@
                                            @csrf
                                         </form>
                             </ul>
-
                         </div>
                     </nav>
                 </div>

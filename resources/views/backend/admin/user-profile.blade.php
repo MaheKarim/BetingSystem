@@ -21,9 +21,9 @@
                             <li class="my-1">Address</li>
                             <li class="my-1">Email</li>
 
-                          
+
                         </ul>
-                        
+
                     </div>
 
                     <div class="col-lg-8">
@@ -33,7 +33,7 @@
                             <li class="my-1">0123456789</li>
                             <li class="my-1">Tangail,Dhaka</li>
                             <li class="my-1">info@cricbazar.com</li>
-                        <li class=""><a href="{{ route('/editprofileyour')}}" class="btn btn-primary mt-3">Edit Profile</a></li>
+                        <li class=""><a href="" class="btn btn-primary mt-3">Edit Profile</a></li>
                         </ul>
                     </div>
                 </div>
