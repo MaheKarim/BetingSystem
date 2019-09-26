@@ -44,6 +44,7 @@
                                             <a class="nav-link active text-primary font-weight-bold text-capitalize"
                                                 href="{{ route('home') }}">Home</a>
                                         </li>
+
                                 @admin
                                 <li class="nav-item">
                                     <div class="btn-group">

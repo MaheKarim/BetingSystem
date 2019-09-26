@@ -20,6 +20,14 @@ class ContactController extends Controller
 
     public function store(Request $request){
 
+        $this->validate($request, [
+
+            'mail' => 'required|email',
+            'phn_number' => 'required|max:11',
+            'message' => 'required'
+        ]);
+
+
        $contacts = new Contact();
        $contacts->username = $request->username;
        $contacts->mail     = $request->mail;
