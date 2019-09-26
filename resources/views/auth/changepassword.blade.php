@@ -61,7 +61,8 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Change Password
-                                </button>
+                                </button> 
+                               
                             </div>
                         </div>
                     </form>

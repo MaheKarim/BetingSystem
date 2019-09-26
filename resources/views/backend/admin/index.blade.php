@@ -7,7 +7,20 @@
 @section('maincontent')
      <h1 align="center">Welcome TO Beting Site </h1>
 
+<!-- Notifications Start -->
 
+@if (session('error'))
+<div class="alert alert-danger">
+    {{ session('error') }}
+</div>
+@endif
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
+<!-- Notificatons End -->
 
 
      <div class="card">
