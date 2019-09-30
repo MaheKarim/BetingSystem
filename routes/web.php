@@ -41,7 +41,6 @@ Route::get('/match-setup/delete/{id}','MatchsetupController@delete')->name('dele
 
 
 // contact page for front-end
-
 Route::get('/contact-us', 'ContactController@index')->name('contactFrontEnd');
 Route::post('/contact-message', 'ContactController@store')->name('contactmessageform');
 
@@ -50,16 +49,17 @@ Route::get('/see-contact', 'ContactController@contactlist')->name('contactbacken
 Route::get('/seecontact/{Contact}', 'ContactController@show')->name('showmessage');
 Route::get('/delete/contact-message/{id}','ContactController@deleteContact')->name('delete_contact');
 
+
 // full match setup
-
-
 Route::resource('fullmatchsetup','FullMatchSetupController')->middleware('admin');
 
 
 // logout
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
-// user profile settings
 
+
+// user profile settings
 Route::get('user-profile', 'UserController@index')->name('userprofile');
 //Route::get('/editprofile','UserController@edit')->name('userprofileyour');
+

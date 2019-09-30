@@ -28,7 +28,7 @@
           Hola! <b> {{ Auth::user()->name }}  </b>
         </div>
         <div class="card-body">
-          <h5 class="card-title">You are our Great, {{ Auth::user()->userType->user_role }} </h5>
+          <h5 class="card-title">You are our Great, <b> {{ Auth::user()->UserRole->user_role }} </b> </h5>
           <p class="card-text">
             Your mail: {{ Auth::user()->email }} <br>
           </p>
