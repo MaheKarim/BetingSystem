@@ -19,8 +19,6 @@
                             <li class="my-1">Phone Number</li>
                             <li class="my-1">Address</li>
                             <li class="my-1">Email</li>
-
-
                         </ul>
 
                     </div>

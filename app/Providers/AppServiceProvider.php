@@ -35,9 +35,14 @@ class AppServiceProvider extends ServiceProvider
             return auth()->check() && auth()->user()->user_role == 1;
         });
         
+        
         //  custom blade dirction for agent
         Blade::if('agent', function () {
             return auth()->check() && auth()->user()->user_role == 2;
+        });
+        //  custom blade dirction for user
+        Blade::if('agent', function () {
+            return auth()->check() && auth()->user()->user_role == 3;
         });
     }
 }
