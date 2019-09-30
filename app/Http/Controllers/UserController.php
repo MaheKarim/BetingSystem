@@ -11,8 +11,12 @@ class UserController extends Controller
 
     public function index(){
         $data = [ ];
-
         return view('backend.admin.user-profile', $data);
+    }
+
+    public function edit(){
+        $data = [ ];
+        return view('backend.admin.edit-profile', $data);
     }
    
 }

@@ -29,7 +29,7 @@
                         <li class="my-1">{{ Auth::user()->phn_number }}</li>
                             <li class="my-1">Address</li>
                         <li class="my-1">{{ Auth::user()->email }}</li>
-                        <li class=""><a href="" class="btn btn-primary mt-3">Edit Profile</a></li>
+                        <li class=""><a href="{{ url('/editprofile') }}" class="btn btn-primary mt-3">Edit Profile</a></li>
                         </ul>
                     </div>
                 </div>
