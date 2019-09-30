@@ -30,10 +30,14 @@ class AppServiceProvider extends ServiceProvider
         // 1071 error code
         Schema::defaultStringLength(191);
 
-        // custome direction
+        // custom direction
         Blade::if('admin', function () {
             return auth()->check() && auth()->user()->user_role == 1;
         });
-
+        
+        //  custom blade dirction for agent
+        Blade::if('agent', function () {
+            return auth()->check() && auth()->user()->user_role == 2;
+        });
     }
 }
