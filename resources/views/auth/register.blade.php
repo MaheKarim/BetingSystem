@@ -52,8 +52,8 @@
                             </div>
                         </div>
 
-                        @admin
-                        <!-- User Role -->
+                       
+                        <!-- User Role  @ admin -->
                         <div class="form-group row">
                             <label for="user_role" class="col-md-4 col-form-label text-md-right">{{ __('Select A Role') }}</label>
 
@@ -72,7 +72,7 @@
                                 @enderror
                             </div>
                         </div>
-                        @endadmin
+                        {{-- @endadmin --}}
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

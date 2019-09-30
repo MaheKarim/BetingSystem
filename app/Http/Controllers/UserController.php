@@ -14,13 +14,5 @@ class UserController extends Controller
 
         return view('backend.admin.user-profile', $data);
     }
-    public function edit(){
-        $data = [ ];
-      //  $users =
-      //
-      //  $data['users'] = new User::();
-
-      //  return view('/editprofile', $data);
-
-    }
+   
 }
