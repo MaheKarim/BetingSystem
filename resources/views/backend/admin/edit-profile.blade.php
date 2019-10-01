@@ -22,15 +22,15 @@
            <!-- Notification End -->
 
             <div class="col-lg-8 mx-auto">
-            <form action="{{ route('update-profile') }}" method="post">
+            <form action="" method="post">
                     @csrf
                         <div class="form-group">
-                          <label for="email">Profile</label>
-                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" >
-                        </div>
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}" />                       
+                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          <label for="phn_number">PHN Number</label>
+                        <input type="text" class="form-control" id="phn_number" value="{{ Auth::user()->phn_number }}">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>

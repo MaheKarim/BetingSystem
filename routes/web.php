@@ -62,5 +62,5 @@ Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('
 // user profile settings
 Route::get('user-profile', 'UserController@index')->name('userprofile');
 Route::get('editprofile','UserController@edit')->name('userprofileyour');
-Route::post('update-profile',' UserController@update')->name('updateProfile');
+//Route::post('/update-profile',' UserController@update')->name('updateProfile');
 
