@@ -18,5 +18,9 @@ class UserController extends Controller
         $data = [ ];
         return view('backend.admin.edit-profile', $data);
     }
-   
+    public function ShowUserlist(){
+        $data = [ ];
+        $data['users'] = User::with('user_role')->get();
+        return view('backend.admin.index', $data);
+    }
 }
