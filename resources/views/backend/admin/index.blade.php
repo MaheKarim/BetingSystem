@@ -68,7 +68,8 @@
               <td>{{ $user->email }}</td>
               <td>{{ $user->balance }} BDT</td>
               <td>{{ $user->UserRole->user_role }}</td>
-              <td> <button type="button" class="btn btn-danger">Edit Balance</button> </td>
+              <td> <a href="
+                " type="button" class="btn btn-danger text-white">Edit Balance</a> </td>
               </tr> 
               @endforeach
             </tbody>
