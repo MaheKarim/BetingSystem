@@ -4,7 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\AgentPayment;
+
 class AgentPaymentController extends Controller
 {
-    protected $tables =  'agent_payments';
+    // 
+
+    public function index(){
+        $data = [ ];
+        $data['agentspayments'] = AgentPayment::all();
+
+        return view('backend.admin.payment', $data);
+    }
 }
