@@ -62,8 +62,7 @@
                                 </li>
                                 @endadmin
 
-
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <div class="btn-group">
                                         <a class="nav-link text-primary font-weight-bold text-capitalize dropdown-toggle"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -75,7 +74,10 @@
                                             <a class="dropdown-item" href="transaction-history.html">Transaction History</a>
                                         </div>
                                     </div>
-                                </li>
+                                </li> --}}
+                                @user
+                                @include('backend.admin._navbar')
+                                @enduser
                                 <li class="nav-item">
                                     <a class="nav-link text-primary font-weight-bold text-capitalize"
                                 href="{{ route('userprofile') }}">User Profile</a>

@@ -64,3 +64,4 @@ Route::get('user-profile', 'UserController@index')->name('userprofile');
 Route::get('editprofile','UserController@edit')->name('userprofileyour');
 //Route::post('/update-profile',' UserController@update')->name('updateProfile');
 
+// Deposit Fund
