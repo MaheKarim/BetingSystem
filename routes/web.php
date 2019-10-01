@@ -1,13 +1,9 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
+|-----------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+|-----------------------------------
 |
 */
 
@@ -21,7 +17,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/changePassword','HomeController@showChangePasswordForm')->name('passChange');
 Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
-
 
 
 // team-setup controller
@@ -58,11 +53,18 @@ Route::resource('fullmatchsetup','FullMatchSetupController')->middleware('admin'
 Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 
-
 // user profile settings
+
 Route::get('user-profile', 'UserController@index')->name('userprofile');
 Route::get('editprofile','UserController@edit')->name('userprofileyour');
 //Route::post('/update-profile',' UserController@update')->name('updateProfile');
 
+
 // Deposit Fund
-Route::get('/deposit/Fund','FundController@index')->name('depositsent');
+
+Route::get('/deposit/fund','FundController@index')->name('depositsent');
+//Route::get('','FundController@show');
+
+
+// Payment Module
+Route::get('/agent/add/paymentInfo','AgentPaymentController@index');
