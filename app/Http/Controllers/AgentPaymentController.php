@@ -8,12 +8,23 @@ use App\AgentPayment;
 
 class AgentPaymentController extends Controller
 {
-    // 
 
     public function index(){
         $data = [ ];
         $data['agentspayments'] = AgentPayment::all();
 
         return view('backend.admin.payment', $data);
+    }
+
+    // store payment accept info
+
+    public function store(Request $request){
+        $agentpayments = new AgentPayment();
+        $agentpayments->payment_method = $request->payment_method;
+        $agentpayments->agent_phn_number = $request->agent_phn_number;
+        $agentpayments->payment_method_type = $request->payment_method_type;
+        $agentpayments->save();
+        session()->flash('success', 'Payment Method Setup Successfully!');
+        return redirect(route('paymentMethodDeclare'));
     }
 }
