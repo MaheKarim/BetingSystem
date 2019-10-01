@@ -69,3 +69,5 @@ Route::get('/deposit/fund','FundController@index')->name('depositsent');
 // Payment Module
 Route::get('/agent/add/paymentInfo','AgentPaymentController@index')->name('paymentMethodDeclare');
 Route::post('/paymentSaveReq','AgentPaymentController@store');
+Route::get('/agent/payment/{id}','AgentPaymentController@show');
+Route::get('delete/payment/{id}','AgentPaymentController@delete')->name('delete_payment');

@@ -51,24 +51,24 @@
                               <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Payment Type</th>
-                                <th scope="col">PHN Number</th>
+                                <th scope="col">PHN / Card Number</th>
                                 <th scope="col">Payment Method Type</th>
                                 <th scope="col">Action </th>
                               </tr>
                             </thead>
                             <tbody>
+                                @foreach ($agentspayments as $agentpayment)
+                                    
+                              
                               <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td><button type="button" class="btn btn-warning">Warning</button> </td>
+                              <td>{{ $agentpayment->payment_method }}</td>
+                              <td>{{ $agentpayment->agent_phn_number }}</td>
+                              <td>{{ $agentpayment->payment_method_type }}</td>
+                              <td><a href="{{ route('delete_payment', $agentpayment->id)}}" type="button" class="btn btn-warning">Warning</a> </td>
                               </tr>
+                              @endforeach
                             </tbody>
                           </table>
               </div>  
-
-
-      
-      
   @endsection
