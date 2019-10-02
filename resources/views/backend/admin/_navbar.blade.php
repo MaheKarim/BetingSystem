@@ -1,3 +1,5 @@
+{{-- Account Option For User --}}
+
 <li class="nav-item">
     <div class="btn-group">
         <a class="nav-link text-primary font-weight-bold text-capitalize dropdown-toggle"
@@ -7,7 +9,7 @@
         <a class="dropdown-item" href="{{ route('depositsent') }}">Deeposit</a>
             <a class="dropdown-item" href="deposit.html">Balance</a>
             <a class="dropdown-item" href="withdraw.html">Cash In</a>
-            <a class="dropdown-item" href="#">Cash Out</a>
+            <a class="dropdown-item" href="#">Cash Out / Withdraw</a>
             <a class="dropdown-item" href="transaction-history.html">Transaction History</a>
         </div>
     </div>
