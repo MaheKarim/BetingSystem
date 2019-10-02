@@ -16,7 +16,7 @@ class CreateAgentPaymentsTable extends Migration
         Schema::create('agent_payments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('payment_method');
-            $table->integer('agent_phn_number');
+            $table->string('agent_phn_number');
             $table->string('payment_method_type');
             $table->string('user_id')->nullable();
             $table->timestamps();
