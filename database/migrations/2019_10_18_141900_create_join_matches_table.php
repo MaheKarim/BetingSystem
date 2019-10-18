@@ -18,6 +18,7 @@ class CreateJoinMatchesTable extends Migration
             $table->integer('user_id');
             $table->integer('team_id');
             $table->integer('full_match_setup_id');
+           // $table->integer('');
             $table->timestamps();
         });
     }

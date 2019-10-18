@@ -71,3 +71,7 @@ Route::get('/agent/add/paymentInfo','AgentPaymentController@index')->name('payme
 Route::post('/paymentSaveReq','AgentPaymentController@store');
 Route::get('/agent/payment/{id}','AgentPaymentController@show');
 Route::get('delete/payment/{id}','AgentPaymentController@delete')->name('delete_payment');
+
+// Join Match 
+
+Route::get('/show/MatchList','JoinMatchController@index');

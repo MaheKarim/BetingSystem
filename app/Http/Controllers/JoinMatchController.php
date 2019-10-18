@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class JoinMatchController extends Controller
 {
-    //
-    protected $guarded = [' '];
+
+   public function index(){
+
+    return \view('frontend.join');
+   }
+
 }
+   
