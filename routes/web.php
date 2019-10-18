@@ -75,3 +75,5 @@ Route::get('delete/payment/{id}','AgentPaymentController@delete')->name('delete_
 // Join Match 
 
 Route::get('/show/MatchList','JoinMatchController@index');
+Route::get('/join/match/{id}','JoinMatchController@join')->name('joinMatch');
+Route::post('/join/match', 'JoinMatchController@join_match_form_submit')->name('join_match_form_submit');

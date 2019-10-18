@@ -42,6 +42,15 @@ class FullMatchSetupController extends Controller
 
     public function store(Request $request)
     {
+
+        if($request->check == 1){
+            $bounce_team = $request->team_1;
+            $net_team = $request->team_2;
+        }else{
+            $bounce_team = $request->team_2;
+            $net_team = $request->team_1;
+        }
+ 
         $fullmatchsetups = new FullMatchSetup();
 
         if($request->check_1 && !$request->check_2){
@@ -52,6 +61,8 @@ class FullMatchSetupController extends Controller
             $fullmatchsetups->net_team = $request->team_1;
         }
         
+        $fullmatchsetups->bounce_team = $bounce_team;
+        $fullmatchsetups->net_team = $net_team;
         $fullmatchsetups->team_1 = $request->team_1;
         $fullmatchsetups->team_2 = $request->team_2;
         $fullmatchsetups->local_time = $request->local_time;

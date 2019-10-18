@@ -8,4 +8,3 @@ class JoinMatch extends Model
 {
     protected $guarded = [' '];
 }
-}

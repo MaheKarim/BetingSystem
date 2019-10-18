@@ -1,36 +1,35 @@
 @extends('frontend.layout')
 
 @section('frontEndContent')
-<div class="container">
-    <div class="row">
-     <div class="col-lg-12 text-center pb-3">
-       <h4 class="text-capitalize  py-2 bg-info text-white">User List</h4>
-     </div>
+                       <!-- Notification Start -->
+                       @if (session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div>
+                       @endif
+                       <!-- Notification End -->
+<div class="row no-gutters bg-light position-relative">
+    @foreach ($fullmatchsetups as $fullmatchsetup)
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <div class="w-100" alt="">
+        <h5 class="mt-0 text-center">Today Team</h5>
+           <h3> {{ $fullmatchsetup->teamName->team_name }} vs {{ $fullmatchsetup->teamName2->team_name }} </h3>
+           <p>Time:  {{ $fullmatchsetup->begin }}</p>
+           <p>Match Type:  {{ $fullmatchsetup->matchFormat->format_type }}</p>
+           <p>Extra Deduction:  {{ $fullmatchsetup->extra_deduction }}</p>
+      </div>
     </div>
-  </div>
-  <table class="table">
-   <thead>
-     <tr>
-       <th scope="col">ID</th>
-       <th scope="col">Name</th>
-       <th scope="col">PHN Number</th>
-       <th scope="col">Balance</th>
-       <th scope="col"> Role </th>
-       <th scope="col"> Action </th>
-     </tr>
-   </thead>
-   <tbody>
-     {{-- @foreach ($users as $user) --}}
-     <tr>
-     <th scope="row">hhh</th>
-     <td>77777777777776</td>
-     <td>r77777777777777</td>
-     <td>t</td>
-     <td>UserR</td>
-     <td> <a href="
-       " type="button" class="btn btn-danger text-white">Edit Balance</a> </td>
-     </tr> 
-     {{-- @endforeach --}}
-   </tbody>
- </table>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0 text-center">Team Info</h5>
+
+      <p class="font-weight-bolder"> Bounce Team: {{ $fullmatchsetup->teamName->team_name }}</p>
+      <p class="font-weight-bolder"> Net Team: {{ $fullmatchsetup->teamName2->team_name }}</p>
+      {{-- <a href="#" class="btn btn-primary btn-sm">Edit</a> --}}
+       |
+    <a href="{{ route('joinMatch', $fullmatchsetup->id) }}" class="btn btn-danger btn-sm mr-0">Join</a>
+    </div>
+    @endforeach
+
+</div>
+    
 @endsection
